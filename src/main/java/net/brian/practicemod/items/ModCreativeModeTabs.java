@@ -1,6 +1,7 @@
 package net.brian.practicemod.items;
 
 import net.brian.practicemod.PracticeMod;
+import net.brian.practicemod.block.ModBlocks;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
@@ -20,6 +21,10 @@ public class ModCreativeModeTabs {
                     .title(Component.translatable("creativetab.fleshcraft"))
                     .displayItems((itemDisplayParameters, output) -> {
                         output.accept(ModItems.NEURALKEY.get());
+
+                        output.accept(ModBlocks.FLESHBLOCK.get());
+                        output.accept(ModBlocks.SKINBLOCK.get());
+
                         output.accept(Items.BONE);
                     })
                     .build());

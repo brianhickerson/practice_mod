@@ -1,6 +1,7 @@
 package net.brian.practicemod;
 
 import com.mojang.logging.LogUtils;
+import net.brian.practicemod.block.ModBlocks;
 import net.brian.practicemod.items.ModCreativeModeTabs;
 import net.brian.practicemod.items.ModItems;
 import net.minecraft.world.item.CreativeModeTabs;
@@ -34,6 +35,7 @@ public class PracticeMod
         ModCreativeModeTabs.register(modEventBus);
 
         ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 
